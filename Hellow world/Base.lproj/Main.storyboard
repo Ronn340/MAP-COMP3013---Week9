@@ -16,35 +16,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello world" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9y-qq-O3h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9y-qq-O3h">
                                 <rect key="frame" x="124" y="168" width="144" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u98-hg-Lzg">
-                                <rect key="frame" x="117" y="409" width="158" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg0-tX-d30">
+                                <rect key="frame" x="124" y="356" width="144" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCb-67-u2T">
-                                <rect key="frame" x="149" y="473" width="95" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="Submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rqf-fY-CO8"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-yx-qFd">
+                                <rect key="frame" x="0.0" y="784" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Add dish" image="homepod.mini.badge.plus" catalog="system" id="Q0j-lv-aWo">
+                                        <connections>
+                                            <action selector="add_dish:" destination="BYZ-38-t0r" id="FJU-Hj-kiM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="View dish" image="list.bullet.rectangle" catalog="system" id="OBp-HD-eUG">
+                                        <connections>
+                                            <action selector="view_dish:" destination="BYZ-38-t0r" id="Ilk-OT-5qG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Edit order" image="pencil.and.list.clipboard" catalog="system" id="7Sf-PT-Rop">
+                                        <connections>
+                                            <action selector="edit_order:" destination="BYZ-38-t0r" id="APz-Af-6Jf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Add order" image="homepod.badge.plus" catalog="system" id="aH7-Fu-a94">
+                                        <connections>
+                                            <action selector="add_order:" destination="BYZ-38-t0r" id="1aO-Ki-Pw0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="Input" destination="u98-hg-Lzg" id="44a-eA-l27"/>
                         <outlet property="Label" destination="Q9y-qq-O3h" id="eC0-t7-a4G"/>
+                        <outlet property="add_dish" destination="Q0j-lv-aWo" id="5LK-um-vFQ"/>
+                        <outlet property="add_order" destination="aH7-Fu-a94" id="4ka-U2-Fb5"/>
+                        <outlet property="edit_order" destination="7Sf-PT-Rop" id="019-gz-eKH"/>
+                        <outlet property="message" destination="Eg0-tX-d30" id="tQH-IC-j7S"/>
+                        <outlet property="view_dish" destination="OBp-HD-eUG" id="d3G-mW-Sx1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -53,6 +75,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="homepod.badge.plus" catalog="system" width="122" height="128"/>
+        <image name="homepod.mini.badge.plus" catalog="system" width="128" height="109"/>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="pencil.and.list.clipboard" catalog="system" width="114" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
