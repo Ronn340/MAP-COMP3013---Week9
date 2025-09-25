@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Label_name: UILabel!
     @IBOutlet weak var Input_name: UITextField!
     @IBOutlet weak var Label_gender: UILabel!
+    @IBOutlet weak var Switch_gender: UISwitch!
     //Change
     
     override func viewDidLoad() {
@@ -20,14 +21,10 @@ class ViewController: UIViewController {
 
     @IBAction func Submit(_ sender: Any) {
         Label_name.text = "Hello " + Input_name.text!
-        Label_gender.text = "Your gender is: " + output
-    }
-    var output = "Female"
-    @IBAction func Switchgender(_ sender: UISwitch) {
-        if (sender.isOn){
-            output = "Female"
+        if Switch_gender.isOn {
+            Label_gender.text = "Your Gender is Female"
         } else {
-            output = "Male"
+            Label_gender.text = "Your Gender is Male"
         }
     }
 }
