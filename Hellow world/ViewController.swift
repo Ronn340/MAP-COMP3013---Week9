@@ -8,16 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var Label_name: UILabel!
+    @IBOutlet weak var Input_name: UITextField!
+    @IBOutlet weak var Label_gender: UILabel!
+    @IBOutlet weak var Input_gender: UITextField!
+    //Change
     
-    @IBOutlet weak var Input: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func Submit(_ sender: Any) {
-        Label.text = "Hello " + Input.text!
+        Label_name.text = "Hello " + Input_name.text!
+        
+        Label_gender.text = "Your gender is " + Input_gender.text!
+        
     }
     
 }
