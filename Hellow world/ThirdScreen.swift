@@ -1,27 +1,27 @@
 //
-//  ViewController.swift
+//  ThirdScreen.swift
 //  Hellow world
 //
-//  Created by Ron Ramos on 24/9/2025.
+//  Created by ron on 26/9/2025.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ThirdScreen: UIViewController {
+
     var passed_val: String?
-    @IBOutlet weak var input_1: UITextField!
+    @IBOutlet weak var input_3: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        input_1.text = passed_val
+        input_3.text = passed_val
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? SecondScreen {
-            vc.passed_val = input_1.text ?? ""
+            vc.passed_val = input_3.text ?? ""
         }
     }
-}
 
+}
